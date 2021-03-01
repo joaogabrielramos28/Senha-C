@@ -47,6 +47,7 @@ int main_menu(){
     } 
     else if (input == 4) {
         printf("Obrigado por jogar e Volte sempre!");
+        return 0;
     }
     return 0;
 }
@@ -164,6 +165,7 @@ int playgame() {
         bad_input = 0;
     } 
     if (tentativa >= 15) { 
+        senha[4] = '\0';
         printf("Voce perdeu! A senha correta era: %s\n", senha);
     }
     printf("Gostaria de jogar novamente? [s/n]\n");
@@ -171,6 +173,7 @@ int playgame() {
     if ( jogar_novamente == 's' ) {
         playgame();
     } else if ( jogar_novamente == 'n' ){
+        system("cls");
         main_menu();
     }  
     return 0;
@@ -179,7 +182,7 @@ int playgame() {
 int show_credits(){
     /*Função que mostra os participantes do trabalho e para que foi feito.*/
     printf("------ Creditos ------\n");
-    printf("\nEste e um trabalho feito para Introducao a C/C++ com o professor Andre Brito\nMembros:\nJoao Gabriel Ramos\nMatheus Vieira\nVinicius Alves Pavani\n\nObrigado por jogar!\n\n");
+    printf("\nEste e um trabalho feito para Introducao a C/C++ com o professor Andre Brito\nMembros:\nJoao Gabriel Ramos\nVinicius Alves Pavani\n\nObrigado por jogar!\n\n");
     main_menu();
     return 0;
 }
