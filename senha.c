@@ -125,7 +125,7 @@ int playgame() {
                 }
                 /*Caso onde o usuário não acertou nenhum caracter da senha, mesmo fora de ordem*/
                 else if((k == 3) && (pos_certa == 0) && (pos_errada == 0)) {
-                    printf("Nenhum dos caracteres inseridos esta na senha\n");
+                    printf("Nenhum dos caracteres inseridos estao na senha\n");
                 }
                 /*Caso onde todos os caracteres foram inseridos na posição correta*/
                 if (pos_certa == 4) {
